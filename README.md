@@ -12,6 +12,23 @@ A hands-on knowledge base for an engineer who wants to learn how to design, buil
 - Treat evaluation, reliability, cost, security, and observability as first-class engineering concerns.
 - Learn frameworks as implementations of durable patterns, not as the patterns themselves.
 
+## How to use this repository
+
+For every major section, follow this loop:
+
+```text
+1. Read the section guide
+2. Build the smallest implementation
+3. Run the suggested experiments
+4. Intentionally break it
+5. Add tests/evaluation
+6. Compare with a framework implementation
+7. Write a short report of trade-offs
+8. Build the section project
+```
+
+The section READMEs now include documentation topics, build sequences, example experiments, project ideas, exit criteria, and primary references. `03-tools/` also contains an expanded [`GUIDE.md`](03-tools/GUIDE.md).
+
 ## Repository structure
 
 ```text
@@ -47,4 +64,4 @@ Each major topic should aim for: **concept → mental model → from-scratch imp
 6. Multi-agent research system
 7. Production-grade agent service
 
-See [`ROADMAP.md`](ROADMAP.md) for the curriculum.
+See [`ROADMAP.md`](ROADMAP.md) for the curriculum and [`resources/README.md`](resources/README.md) for the curated study list.
