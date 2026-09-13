@@ -1,24 +1,17 @@
 # 04 — Agents
 
-> **Read first:** [Visual Study Guide](../docs/sections/04-agents.md)
+> **Read first:** [`STUDY-GUIDE.md`](STUDY-GUIDE.md) — agent loops, state, planning, budgets, memory, approvals, and security.
 
-Build the agent abstraction from first principles before adopting a framework.
-
-## Core model
-
-```text
-observe → decide → validate → act → observe → stop
-```
+Build the agent abstraction from first principles before adopting an agent framework.
 
 ## Core concepts
 
-Agent loop, state, tools, planning, budgets, reflection, memory integration, human approval, retries, security, and termination.
+Agent loops, tool selection, state, context, planning, reflection, memory integration, retries, stop conditions, human approval, and agent security.
 
 ## Build next
 
-- Single-tool agent loop
-- Bounded agent runtime
-- Reactive vs plan-first comparison
-- Human approval checkpoint
+- From-scratch agent loop
+- Bounded tool runtime
+- Reactive vs plan-first benchmark
 - Stateful research agent
-- Security/failure injection tests
+- Approval-gated assistant
