@@ -1,6 +1,6 @@
 # 00 — Foundations
 
-> **Read first:** [Visual Study Guide](../docs/sections/00-foundations.md)
+> **Read first:** [`STUDY-GUIDE.md`](STUDY-GUIDE.md) — diagrams, mental models, worked examples, and best practices.
 
 Prerequisites for AI engineering: Python, HTTP/API fundamentals, async programming, schemas, testing, Docker, ML, and transformer fundamentals.
 
@@ -21,4 +21,4 @@ Prerequisites for AI engineering: Python, HTTP/API fundamentals, async programmi
 4. Mini attention implementation.
 5. Containerized FastAPI service.
 
-Then return to the [visual guide](../docs/sections/00-foundations.md) before moving to LLM Engineering.
+Then continue into the examples, labs, and projects in this folder.
