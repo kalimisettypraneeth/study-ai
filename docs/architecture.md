@@ -1,48 +1,59 @@
 # Repository Architecture
 
-This repository separates durable knowledge from implementation details.
+This repository keeps section-specific knowledge next to the implementation and experiments it explains. The `docs/` folder is reserved for cross-cutting material such as architecture, tooling selection, and database strategy.
 
-## Layers
+## Section structure
 
-- **Foundations:** prerequisites and mental models.
-- **Primitives:** LLM calls, structured output, tools, retrieval, state.
-- **Systems:** agents, RAG pipelines, workflows, multi-agent systems.
-- **Quality:** evaluation and observability.
-- **Operations:** security, reliability, deployment, cost, governance.
-- **Frameworks:** concrete SDK implementations and comparisons.
-- **Labs:** experiments that isolate variables.
-- **Projects:** integrated systems.
-
-## Standard topic template
+Every numbered section follows this pattern:
 
 ```text
-<topic>/
+<01-section>/
 ├── README.md
-├── notes.md
+├── STUDY-GUIDE.md
+├── topics/            # optional deeper topic pages
 ├── examples/
 ├── experiments/
 ├── tests/
-└── report.md
+├── report.md
+└── projects/          # optional section-specific projects
 ```
 
-Use [`docs/topic-template.md`](topic-template.md) when adding a new topic. Not every topic needs every file; prefer small, executable examples over large notebooks.
+### README.md
+Navigation, prerequisites, build sequence, labs, projects, and exit criteria.
+
+### STUDY-GUIDE.md
+Read-first material: mental models, Mermaid diagrams, plain-English explanations, worked examples, best practices, references, and key takeaways for the section's topics.
+
+### topics/
+Use this when one concept needs its own mini-chapter. A topic page should explain the concept, show a diagram, provide a small example, list failure modes, and finish with references and an exit check.
+
+### examples/ and experiments/
+Examples should be small and runnable. Experiments should isolate one engineering question and record the configuration, measurements, and interpretation.
+
+## Cross-cutting docs
+
+```text
+docs/
+├── architecture.md
+├── tooling-guide.md
+└── databases-for-ai.md
+```
+
+These documents span multiple numbered sections and therefore remain outside the section folders.
 
 ## Learning workflow
 
-Every topic should progress through:
-
 ```text
-concept → mental model → from-scratch build → runnable example
-       → tests → experiment → failure modes
-       → framework comparison → production pattern → project
+concept → mental model → diagram → worked example
+       → from-scratch build → tests → experiment
+       → failure modes → framework comparison
+       → production pattern → project
 ```
-
-Keep the experiment configuration and result interpretation with the code so results can be reproduced later.
 
 ## Design rule
 
-If a framework hides an important behavior, first reproduce the behavior with a minimal implementation. Then use the framework and compare the abstractions.
+If a framework hides an important behavior, reproduce the behavior with a minimal implementation first. Then use the framework and compare the abstraction, control, failure behavior, and operational cost.
 
 ## Source rule
 
-Prefer primary sources: official documentation, original papers, standards/protocol specifications, and source code. For fast-moving APIs, record the version/date used in the experiment.
+Prefer primary sources: official documentation, original papers, standards/protocol specifications, and source code. For fast-moving APIs, record the package/framework/model version and the date used in each experiment.
