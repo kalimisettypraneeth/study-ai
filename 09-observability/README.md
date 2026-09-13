@@ -1,6 +1,6 @@
 # 09 — Observability
 
-> **Read first:** [Visual Study Guide](../docs/sections/09-observability.md)
+> **Read first:** [`STUDY-GUIDE.md`](STUDY-GUIDE.md) — logs, traces, metrics, AI-specific telemetry, privacy, and debugging.
 
 Make AI behavior inspectable and measurable.
 
