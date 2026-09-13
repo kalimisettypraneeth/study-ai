@@ -1,12 +1,12 @@
 # 01 — LLM Engineering
 
-> **Read first:** [Visual Study Guide](../docs/sections/01-llm-engineering.md)
+> **Read first:** [`STUDY-GUIDE.md`](STUDY-GUIDE.md) — visual explanations, concepts, examples, and best practices.
 
 Learn to treat an LLM as an engineering primitive before treating it as an agent.
 
 ## Core concepts
 
-Tokens and context, prompt design, structured outputs, tool calling, streaming, sampling, model routing, retries, failures, and safety.
+Tokens/context, prompt design, structured outputs, tool calling, streaming, sampling, model routing, retries, failures, and safety.
 
 ## Build next
 
@@ -16,5 +16,3 @@ Tokens and context, prompt design, structured outputs, tool calling, streaming, 
 - From-scratch tool-calling loop
 - Safe tool runtime
 - Model router
-
-Use the visual guide for diagrams and mental models, then use this section's labs and projects to implement them.
