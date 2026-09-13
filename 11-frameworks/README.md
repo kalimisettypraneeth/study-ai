@@ -1,8 +1,8 @@
 # 11 — Frameworks
 
-> **Read first:** [Visual Study Guide](../docs/sections/11-frameworks.md)
+> **Read first:** [`STUDY-GUIDE.md`](STUDY-GUIDE.md) — framework roles, abstraction layers, canonical comparison, and selection criteria.
 
-Frameworks are studied after the underlying patterns are understood. The goal is to learn what abstraction the framework is providing, not just how to call its API.
+Frameworks are studied after the underlying patterns are understood. The goal is to learn what abstraction the framework provides, not just how to call its API.
 
 ## Framework families
 
@@ -35,5 +35,3 @@ Every framework should implement the same workloads:
 ## Selection rule
 
 Choose based on the problem: integrations, typed agents, stateful orchestration, retrieval/data pipelines, multi-agent collaboration, optimization, or tool interoperability.
-
-See the [visual guide](../docs/sections/11-frameworks.md) for diagrams, comparison questions, and the framework decision model.
