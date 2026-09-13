@@ -2,6 +2,27 @@
 
 Use this template for every new subject in the repository.
 
+## Section-level reading flow
+
+Each numbered section should expose three layers:
+
+```text
+README.md
+   ↓
+STUDY-GUIDE.md
+   ↓
+CONCEPTS.md
+   ↓
+examples/ + experiments/ + tests/
+```
+
+- `README.md` — roadmap, scope, build sequence, and project links.
+- `STUDY-GUIDE.md` — concise mental models, diagrams, examples, and best practices.
+- `CONCEPTS.md` — detailed explanatory notes that unpack the study guide concepts.
+- `examples/` — runnable implementations.
+- `experiments/` — focused comparisons and measurements.
+- `tests/` — correctness and failure tests.
+
 ## 1. What is it?
 
 Explain the problem in plain language and define the important terms.
