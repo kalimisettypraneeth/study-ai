@@ -4,6 +4,10 @@ A hands-on knowledge base for an engineer who wants to learn how to design, buil
 
 **Learning progression:** LLMs → prompting → structured outputs → tools → agents → memory → RAG → orchestration → multi-agent systems → evaluation → observability → production.
 
+## Read this first
+
+Start with the [Visual Section Guides](docs/sections/README.md). Each page is designed to teach the concept through diagrams, mental models, plain-English explanations, worked examples, best practices, and references before you start coding.
+
 ## Philosophy
 
 - Understand the primitive before the framework.
@@ -17,17 +21,16 @@ A hands-on knowledge base for an engineer who wants to learn how to design, buil
 For every major section, follow this loop:
 
 ```text
-1. Read the section guide
-2. Build the smallest implementation
-3. Run the suggested experiments
-4. Intentionally break it
-5. Add tests/evaluation
-6. Compare with a framework implementation
-7. Write a short report of trade-offs
-8. Build the section project
+1. Read the visual section guide
+2. Read the section README
+3. Build the smallest implementation
+4. Run the suggested experiments
+5. Intentionally break it
+6. Add tests/evaluation
+7. Compare with a framework implementation
+8. Write a short trade-off report
+9. Build the section project
 ```
-
-The section READMEs now include documentation topics, build sequences, example experiments, project ideas, exit criteria, and primary references. `03-tools/` also contains an expanded [`GUIDE.md`](03-tools/GUIDE.md).
 
 ## Repository structure
 
@@ -48,11 +51,12 @@ study-ai/
 ├── labs/
 ├── projects/
 ├── docs/
+│   ├── sections/
+│   ├── tooling-guide.md
+│   └── databases-for-ai.md
 ├── resources/
 └── scripts/
 ```
-
-Each major topic should aim for: **concept → mental model → from-scratch implementation → experiment → failure modes → framework implementation → evaluation → production pattern**.
 
 ## Capstone sequence
 
@@ -64,4 +68,4 @@ Each major topic should aim for: **concept → mental model → from-scratch imp
 6. Multi-agent research system
 7. Production-grade agent service
 
-See [`ROADMAP.md`](ROADMAP.md) for the curriculum and [`resources/README.md`](resources/README.md) for the curated study list.
+See [`ROADMAP.md`](ROADMAP.md) for the curriculum, [`docs/tooling-guide.md`](docs/tooling-guide.md) for technology selection, and [`docs/databases-for-ai.md`](docs/databases-for-ai.md) for database/retrieval concepts.
