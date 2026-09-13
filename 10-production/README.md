@@ -1,6 +1,6 @@
 # 10 — Production
 
-> **Read first:** [Visual Study Guide](../docs/sections/10-production.md)
+> **Read first:** [`STUDY-GUIDE.md`](STUDY-GUIDE.md) — production architecture, resilience, security, prompt injection, controls, and incident response.
 
 Turn prototypes into reliable AI services.
 
