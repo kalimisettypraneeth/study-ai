@@ -1,6 +1,6 @@
 # 02 — Model APIs
 
-> **Read first:** [Visual Study Guide](../docs/sections/02-model-apis.md)
+> **Read first:** [`STUDY-GUIDE.md`](STUDY-GUIDE.md) — provider boundaries, reliability, streaming, routing, and cost concepts.
 
 Build a reliable boundary between your application and model providers.
 
@@ -16,5 +16,3 @@ Clients, authentication, request/response contracts, streaming, timeouts, retrie
 4. Deterministic model router.
 5. Usage/cost ledger.
 6. Provider gateway.
-
-The visual guide explains the request lifecycle and provider abstraction before you implement it.
