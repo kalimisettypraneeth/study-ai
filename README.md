@@ -6,7 +6,7 @@ A hands-on knowledge base for an engineer who wants to learn how to design, buil
 
 ## Read this first
 
-Start with the [Visual Section Guides](docs/sections/README.md). Each page is designed to teach the concept through diagrams, mental models, plain-English explanations, worked examples, best practices, and references before you start coding.
+Open the `STUDY-GUIDE.md` inside the section you are studying. Each guide teaches the concepts through diagrams, mental models, plain-English explanations, worked examples, best practices, and references before you start coding.
 
 ## Philosophy
 
@@ -21,7 +21,7 @@ Start with the [Visual Section Guides](docs/sections/README.md). Each page is de
 For every major section, follow this loop:
 
 ```text
-1. Read the visual section guide
+1. Read the local STUDY-GUIDE.md
 2. Read the section README
 3. Build the smallest implementation
 4. Run the suggested experiments
@@ -37,6 +37,11 @@ For every major section, follow this loop:
 ```text
 study-ai/
 ├── 00-foundations/
+│   ├── README.md
+│   ├── STUDY-GUIDE.md
+│   ├── examples/
+│   ├── experiments/
+│   └── tests/
 ├── 01-llm-engineering/
 ├── 02-model-apis/
 ├── 03-tools/
@@ -51,12 +56,14 @@ study-ai/
 ├── labs/
 ├── projects/
 ├── docs/
-│   ├── sections/
+│   ├── architecture.md
 │   ├── tooling-guide.md
 │   └── databases-for-ai.md
 ├── resources/
 └── scripts/
 ```
+
+Every numbered section follows the same pattern: `README.md` for navigation and build tasks, `STUDY-GUIDE.md` for concepts/diagrams/examples, then examples, experiments, tests, and projects.
 
 ## Capstone sequence
 
