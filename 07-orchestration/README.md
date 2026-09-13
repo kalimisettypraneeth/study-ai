@@ -1,6 +1,6 @@
 # 07 — Orchestration
 
-> **Read first:** [Visual Study Guide](../docs/sections/07-orchestration.md)
+> **Read first:** [`STUDY-GUIDE.md`](STUDY-GUIDE.md) — workflows, state machines, parallelism, checkpoints, retries, and human approval.
 
 Move from one agent loop to reliable, inspectable workflows.
 
