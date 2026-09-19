@@ -1,0 +1,49 @@
+{
+  "workflow_a_bill_extractor": {
+    "nodes": [
+      {"type":"Schedule Trigger","config":{"interval":"5m"}},
+      {"type":"Gmail","config":{"resource":"message","operation":"getMany","readStatus":"unread","search":"label:inbox (receipt OR invoice OR bill OR payment OR statement)"}},
+      {"type":"Gmail","config":{"resource":"message","operation":"get","simplify":false}},
+      {"type":"Code","config":{"purpose":"normalize email body, collect attachment text, create source identifiers"}},
+      {"type":"LLM Chain","config":{"output":"structured_json","schema":"schemas/llm-schemas.json#/bill_extraction"}},
+      {"type":"Code","config":{"purpose":"validate amount/date/currency and reject unsupported values"}},
+      {"type":"Data Table or Postgres","config":{"purpose":"idempotent upsert using deterministic source key"}},
+      {"type":"Gmail","config":{"resource":"message","operation":"markAsRead"}}
+    ]
+  },
+  "workflow_b_email_triage": {
+    "nodes": [
+      {"type":"Schedule Trigger","config":{"interval":"5m"}},
+      {"type":"Gmail","config":{"resource":"message","operation":"getMany","readStatus":"unread","search":"is:unread -label:spam -label:trash"}},
+      {"type":"Gmail","config":{"resource":"message","operation":"get","simplify":false}},
+      {"type":"LLM Chain","config":{"output":"structured_json","schema":"schemas/llm-schemas.json#/email_triage"}},
+      {"type":"IF","config":{"condition":"needs_reply == true && draft_reply != null"}},
+      {"type":"Gmail","config":{"resource":"draft","operation":"create","purpose":"create suggested reply without sending"}},
+      {"type":"Data Table or Postgres","config":{"purpose":"store approval record with pending status and opaque approval_id"}},
+      {"type":"Telegram","config":{"operation":"sendMessage","replyMarkup":"inline_keyboard","callbackData":["approve:<approval_id>","reject:<approval_id>"]}}
+    ]
+  },
+  "workflow_b_telegram_callback": {
+    "nodes": [
+      {"type":"Telegram Trigger","config":{"updates":["callback_query"]}},
+      {"type":"Code","config":{"purpose":"allowlist chat id; parse action and opaque approval id"}},
+      {"type":"Data Table or Postgres","config":{"purpose":"load pending approval"}},
+      {"type":"IF","config":{"condition":"action == approve"}},
+      {"type":"Gmail","config":{"resource":"draft","operation":"send","purpose":"only after validated approval"}},
+      {"type":"Data Table or Postgres","config":{"purpose":"atomic state transition pending -> sent/rejected"}},
+      {"type":"Telegram","config":{"operation":"answerQuery"}},
+      {"type":"Telegram","config":{"operation":"editMessageText"}}
+    ]
+  },
+  "workflow_c_daily_agenda": {
+    "nodes": [
+      {"type":"Schedule Trigger","config":{"cron":"0 7 * * *"}},
+      {"type":"Gmail","config":{"resource":"message","operation":"getMany","search":"is:unread"}},
+      {"type":"Google Tasks","config":{"purpose":"get overdue and due-today tasks"}},
+      {"type":"Code","config":{"purpose":"normalize dates and deterministic candidate actions"}},
+      {"type":"LLM Chain","config":{"purpose":"summarize/prioritize only; no direct side effects"}},
+      {"type":"Google Tasks","config":{"operation":"create","purpose":"create deduplicated priority tasks"}},
+      {"type":"Telegram","config":{"operation":"sendMessage","purpose":"morning summary"}}
+    ]
+  }
+}
