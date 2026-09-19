@@ -1,0 +1,35 @@
+{
+  "bill_extraction": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "biller": { "type": ["string", "null"] },
+      "amount": { "type": ["number", "null"] },
+      "currency": { "type": ["string", "null"] },
+      "due_date": { "type": ["string", "null"], "format": "date" },
+      "payment_status": {
+        "type": "string",
+        "enum": ["paid", "unpaid", "pending", "unknown"]
+      }
+    },
+    "required": ["biller", "amount", "currency", "due_date", "payment_status"]
+  },
+  "email_triage": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "category": {
+        "type": "string",
+        "enum": ["action_required", "finance", "work", "personal", "newsletter", "notification", "spam", "other"]
+      },
+      "priority": {
+        "type": "string",
+        "enum": ["high", "medium", "low"]
+      },
+      "summary": { "type": "string" },
+      "needs_reply": { "type": "boolean" },
+      "draft_reply": { "type": ["string", "null"] }
+    },
+    "required": ["category", "priority", "summary", "needs_reply", "draft_reply"]
+  }
+}
