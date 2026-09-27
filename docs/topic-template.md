@@ -85,3 +85,7 @@ Record the version/date when a resource or API is fast-moving.
 ## 13. Exit criteria
 
 State what the learner must be able to build, test, explain, and debug before moving on.
+
+## Apply this topic
+
+See the [architecture, database, and tooling workbook](PRACTICE.md) for worked examples, exercises, and answer explanations.

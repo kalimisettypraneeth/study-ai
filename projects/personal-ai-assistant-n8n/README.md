@@ -4,29 +4,20 @@ A security-first reference implementation for a self-hosted personal assistant u
 
 ## Architecture
 
-                    +----------------------+
-                    | Gmail                |
-                    | mail + attachments   |
-                    +----------+-----------+
-                               |
-                         scheduled poll
-                               v
-+--------------+       +----------------------+
-| Telegram Bot |<------| n8n                  |
-| mobile UI    |       | orchestration/state |
-+------+-------+       +---------+------------+
-       | callback                |
-       | approve/reject          v
-       v                 +--------------------+
-+--------------+         | Gemini/OpenAI      |
-| HITL router  |-------> | structured output  |
-+--------------+         +---------+----------+
-                                   |
-                                   v
-                          +------------------+
-                          | Google Tasks     |
-                          | daily priorities |
-                          +------------------+
+```mermaid
+flowchart TD
+    Gmail[Gmail messages and attachments] --> N8N[n8n orchestration]
+    N8N --> Model[Structured extraction and drafting]
+    Model --> Validate[Validate fields and evidence]
+    Validate --> State[(Bills and pending approvals)]
+    State --> Telegram[Telegram review]
+    Telegram --> Gate{Exact action approved?}
+    Gate -->|Yes| Action[Controlled Gmail or task action]
+    Gate -->|No| Hold[Reject or keep pending]
+    State --> Agenda[Daily task summary]
+```
+
+Read the approval branch as an application-enforced state transition. Model output alone cannot authorize sending.
 
 ## Safety boundary
 
@@ -50,3 +41,7 @@ See docs/implementation.md for exact configuration and prompts.
 See schemas/llm-schemas.json for extraction/triage schemas.
 See workflows/node-manifests.json for node-by-node implementation logic.
 See docker-compose.yml and .env.example for deployment.
+
+## Guided learning and practice
+
+Read the [learning walkthrough](LEARNING-WALKTHROUGH.md) for invoice examples, approval-state diagrams, failure exercises, and a five-question quiz. The node manifests are design references, not directly importable n8n workflow exports.

@@ -1,5 +1,7 @@
 # 00 — Foundations: Concept Notes
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/bounded_async.py) · [Full learning path](../LEARNING-PATH.md)
+
 This page expands the study guide into explanatory notes. Read it before coding.
 
 ## 1. AI engineering is software engineering + probabilistic components

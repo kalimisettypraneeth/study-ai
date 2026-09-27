@@ -1,5 +1,7 @@
 # 03 — Tools: Study Guide
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/tool_gateway.py) · [Full learning path](../LEARNING-PATH.md)
+
 ## What is a tool?
 
 ```mermaid

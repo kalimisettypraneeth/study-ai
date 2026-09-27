@@ -1,5 +1,7 @@
 # 10 — Production
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/admission_budget.py) · [Full learning path](../LEARNING-PATH.md)
+
 > **Read first:** [`STUDY-GUIDE.md`](STUDY-GUIDE.md) — production architecture, resilience, security, prompt injection, controls, and incident response.
 
 Turn prototypes into reliable AI services.

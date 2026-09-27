@@ -1,5 +1,7 @@
 # 07 — Orchestration: Concept Notes
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/checkpoint_resume.py) · [Full learning path](../LEARNING-PATH.md)
+
 ## Why orchestration exists
 
 A single agent loop handles local decisions. Orchestration handles a process with multiple steps, state transitions, retries, concurrency, and human pauses.

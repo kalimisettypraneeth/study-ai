@@ -1,5 +1,7 @@
 # 06 — RAG
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/hybrid_search.py) · [Full learning path](../LEARNING-PATH.md)
+
 > **Read first:** [`STUDY-GUIDE.md`](STUDY-GUIDE.md) — ingestion, dense/sparse retrieval, vector search, hybrid retrieval, reranking, databases, and evaluation.
 
 Build retrieval-augmented generation from first principles and learn where retrieval systems fail. RAG is a data pipeline plus a generation step, not simply “put documents in a vector database.”

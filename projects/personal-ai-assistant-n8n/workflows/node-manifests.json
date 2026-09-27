@@ -26,11 +26,12 @@
   "workflow_b_telegram_callback": {
     "nodes": [
       {"type":"Telegram Trigger","config":{"updates":["callback_query"]}},
-      {"type":"Code","config":{"purpose":"allowlist chat id; parse action and opaque approval id"}},
+      {"type":"Code","config":{"purpose":"verify callback sender and chat; parse action and opaque approval id"}},
       {"type":"Data Table or Postgres","config":{"purpose":"load pending approval"}},
       {"type":"IF","config":{"condition":"action == approve"}},
-      {"type":"Gmail","config":{"resource":"draft","operation":"send","purpose":"only after validated approval"}},
-      {"type":"Data Table or Postgres","config":{"purpose":"atomic state transition pending -> sent/rejected"}},
+      {"type":"Data Table or Postgres","config":{"purpose":"approve branch: validate owner, expiry and exact draft hash/version; atomically claim pending -> sending before Gmail; reject branch: atomically mark rejected without sending"}},
+      {"type":"Gmail","config":{"resource":"draft","operation":"send","purpose":"send exact approved draft only after successful atomic pending -> sending claim"}},
+      {"type":"Data Table or Postgres","config":{"purpose":"persist confirmed sent/rejected outcome; unknown send outcomes require reconciliation before retry"}},
       {"type":"Telegram","config":{"operation":"answerQuery"}},
       {"type":"Telegram","config":{"operation":"editMessageText"}}
     ]

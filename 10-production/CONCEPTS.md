@@ -1,5 +1,7 @@
 # 10 — Production: Concept Notes
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/admission_budget.py) · [Full learning path](../LEARNING-PATH.md)
+
 ## Prototype → production
 
 ```mermaid

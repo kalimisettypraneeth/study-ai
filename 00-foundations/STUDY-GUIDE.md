@@ -1,5 +1,7 @@
 # 00 — Foundations: Study Guide
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/bounded_async.py) · [Full learning path](../LEARNING-PATH.md)
+
 > Read this before the section README. This page keeps the concepts, diagrams, worked examples, and best practices beside the section they explain.
 
 ## Big picture

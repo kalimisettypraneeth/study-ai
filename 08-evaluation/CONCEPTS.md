@@ -1,5 +1,7 @@
 # 08 — Evaluation: Concept Notes
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/score_predictions.py) · [Full learning path](../LEARNING-PATH.md)
+
 ## Why evaluation is different
 
 AI systems can produce multiple acceptable answers, and a plausible-looking answer can still be wrong or unsafe.

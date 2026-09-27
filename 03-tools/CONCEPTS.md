@@ -1,5 +1,7 @@
 # 03 — Tools: Concept Notes
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/tool_gateway.py) · [Full learning path](../LEARNING-PATH.md)
+
 ## What a tool really is
 
 A tool is a controlled bridge between model decisions and deterministic software.

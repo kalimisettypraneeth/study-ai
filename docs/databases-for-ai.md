@@ -304,3 +304,7 @@ Document the operational and engineering trade-offs.
 ## Exit criteria
 
 You can explain the difference between a transaction, an exact lookup, lexical retrieval, dense semantic retrieval, sparse retrieval, hybrid retrieval, reranking, and a vector index. You can choose a database from workload requirements rather than from framework popularity.
+
+## Apply this topic
+
+See the [architecture, database, and tooling workbook](PRACTICE.md) for worked examples, exercises, and answer explanations.

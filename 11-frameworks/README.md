@@ -1,5 +1,7 @@
 # 11 — Frameworks
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/adapter_contract.py) · [Full learning path](../LEARNING-PATH.md)
+
 > **Read first:** [`STUDY-GUIDE.md`](STUDY-GUIDE.md) — framework roles, abstraction layers, canonical comparison, and selection criteria.
 
 Frameworks are studied after the underlying patterns are understood. The goal is to learn what abstraction the framework provides, not just how to call its API.

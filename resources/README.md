@@ -57,3 +57,7 @@ Before adding a resource, ask:
 5. Will the link remain useful if a framework API changes?
 
 For fast-moving frameworks, save the version/date studied in the relevant framework README rather than assuming the current documentation is permanent.
+
+## Applied exercises and quiz
+
+Use the local [practice workbook](PRACTICE.md) for a worked example, exercises, acceptance criteria, and a quiz with explanations.

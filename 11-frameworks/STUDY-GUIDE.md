@@ -1,5 +1,7 @@
 # 11 — Frameworks: Study Guide
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/adapter_contract.py) · [Full learning path](../LEARNING-PATH.md)
+
 ## Why frameworks exist
 
 Frameworks package repeated patterns around model calls, tools, state, workflows, retrieval, memory, evaluation, and observability.

@@ -1,5 +1,7 @@
 # 09 — Observability
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/trace_summary.py) · [Full learning path](../LEARNING-PATH.md)
+
 > **Read first:** [`STUDY-GUIDE.md`](STUDY-GUIDE.md) — logs, traces, metrics, AI-specific telemetry, privacy, and debugging.
 
 Make AI behavior inspectable and measurable.

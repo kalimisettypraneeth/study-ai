@@ -72,7 +72,9 @@ Before writing a bill to a database, calculate a key such as:
 
     sha256(gmail_message_id + "|" + biller + "|" + amount + "|" + due_date)
 
-Use a persistent store (Postgres recommended once this grows) or n8n Data Table for the initial implementation. Do not create a duplicate record when the key already exists.
+For a robust source identity, prefer stable mailbox/message/attachment/invoice identifiers. The illustrative content-based hash above can change when extraction changes; do not rely on model-generated biller, amount, or due date as the sole dedupe identity. Multiple invoices in one message require stable document identities or review.
+
+Use a persistent store with a uniqueness constraint and atomic upsert. Choose a storage operation that actually provides these guarantees; a separate lookup followed by an insert can race. Do not mark a source processed until persistence succeeds.
 
 ## 4. Workflow B — Email Triage + HITL Drafting
 
@@ -153,10 +155,11 @@ Look up the approval record by approvalId.
 1. Verify status is pending.
 2. Verify the approval record has not expired.
 3. Verify the Gmail draft still exists.
-4. Send the Gmail draft.
-5. Mark approval approved/sent.
-6. Answer the Telegram callback query.
-7. Edit the Telegram message to show Sent.
+4. Verify the recipient, subject, and body still match the approved draft version/hash; edits require fresh approval.
+5. Atomically claim `pending -> sending` before calling Gmail. If another callback already claimed it, do not send again.
+6. Send the exact approved Gmail draft.
+7. On confirmed success, mark `sent` and store the remote result identifier. On an ambiguous timeout or crash, mark/recover as `unknown` and reconcile remote state before any retry.
+8. Answer the Telegram callback query and update the message to the actual persisted status.
 
 ### Reject
 
@@ -166,7 +169,7 @@ Look up the approval record by approvalId.
 4. Answer callback query.
 5. Edit the Telegram message to show Rejected.
 
-Use an atomic status transition so two taps cannot send the same draft twice.
+Use an atomic claim before sending to prevent duplicate callback dispatch. A local claim does not provide exactly-once delivery across Gmail and your database: reconcile unknown outcomes after a timeout or crash. Validate the callback sender's identity as well as the chat ID.
 
 ## 6. Telegram setup
 
@@ -213,7 +216,7 @@ For each selected action item:
 Use a deterministic dedupe key:
     sha256(source_message_id + "|" + normalized_action)
 
-## 8. Zero-hallucination controls
+## 8. Hallucination risk-reduction controls
 
 Structured output constrains syntax; it does not prove the extracted value is true.
 

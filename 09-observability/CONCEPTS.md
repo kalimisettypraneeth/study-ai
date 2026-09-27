@@ -1,5 +1,7 @@
 # 09 — Observability: Concept Notes
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/trace_summary.py) · [Full learning path](../LEARNING-PATH.md)
+
 ## What observability answers
 
 ```text

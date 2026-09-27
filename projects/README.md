@@ -213,3 +213,7 @@ A project is incomplete if it only demonstrates a working demo. It must also exp
 4. how quality is measured;
 5. how the system is observed;
 6. what would cause you to replace the chosen library or framework.
+
+## Applied exercises and quiz
+
+Use the local [practice workbook](PRACTICE.md) for a worked example, exercises, acceptance criteria, and a quiz with explanations.

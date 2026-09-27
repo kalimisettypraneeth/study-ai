@@ -57,3 +57,7 @@ If a framework hides an important behavior, reproduce the behavior with a minima
 ## Source rule
 
 Prefer primary sources: official documentation, original papers, standards/protocol specifications, and source code. For fast-moving APIs, record the package/framework/model version and the date used in each experiment.
+
+## Applied exercises and quiz
+
+Use the local [practice workbook](PRACTICE.md) for a worked example, exercises, acceptance criteria, and a quiz with explanations.

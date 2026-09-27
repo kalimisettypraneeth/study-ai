@@ -1,5 +1,7 @@
 # 11 — Frameworks: Concept Notes
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/adapter_contract.py) · [Full learning path](../LEARNING-PATH.md)
+
 ## Why frameworks exist
 
 Frameworks package repeated engineering patterns so teams do not rebuild them for every application.

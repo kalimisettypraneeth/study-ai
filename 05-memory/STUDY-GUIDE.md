@@ -1,5 +1,7 @@
 # 05 — Memory: Study Guide
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/scoped_memory.py) · [Full learning path](../LEARNING-PATH.md)
+
 ## State vs memory
 
 ```mermaid

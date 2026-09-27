@@ -66,3 +66,7 @@ Change one important variable at a time. Store the exact model/provider/version,
 ## Project-scale labs
 
 Before a capstone, run small labs to reduce uncertainty: benchmark the retriever, test the tool registry, measure model latency, and intentionally break the workflow before combining everything.
+
+## Applied exercises and quiz
+
+Use the local [practice workbook](PRACTICE.md) for a worked example, exercises, acceptance criteria, and a quiz with explanations.

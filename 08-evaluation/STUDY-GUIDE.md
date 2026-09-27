@@ -1,5 +1,7 @@
 # 08 — Evaluation: Study Guide
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/score_predictions.py) · [Full learning path](../LEARNING-PATH.md)
+
 ## Evaluation loop
 
 ```mermaid

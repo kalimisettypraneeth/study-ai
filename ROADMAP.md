@@ -393,3 +393,7 @@ Every important sample should also document:
 - when not to use the tool
 
 See [`docs/tooling-guide.md`](docs/tooling-guide.md) for the detailed package/framework decision matrix and reference links.
+
+## Concrete lessons and practice
+
+Use [LEARNING-PATH.md](LEARNING-PATH.md) as the navigable companion to this roadmap. It links the detailed section lessons, two exercises and five quiz questions per core section, offline examples with expected outputs, and the supporting project/certification workbooks.

@@ -1,5 +1,7 @@
 # 07 — Orchestration: Study Guide
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/checkpoint_resume.py) · [Full learning path](../LEARNING-PATH.md)
+
 ## Why orchestration?
 
 An agent loop handles local decisions. Orchestration manages multi-step state, branching, parallel work, retries, checkpoints, queues, and human pauses.

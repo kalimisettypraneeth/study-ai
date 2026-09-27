@@ -1,5 +1,7 @@
 # 01 — LLM Engineering: Concept Notes
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/validate_ticket.py) · [Full learning path](../LEARNING-PATH.md)
+
 ## 1. The LLM boundary
 
 ```mermaid

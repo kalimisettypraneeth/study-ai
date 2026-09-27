@@ -633,3 +633,11 @@ Primary documentation should be re-checked before upgrading dependencies because
 - [Langfuse](https://langfuse.com/docs)
 
 This list is a study map, not an endorsement ranking.
+
+## Apply this topic
+
+See the [architecture, database, and tooling workbook](PRACTICE.md) for worked examples, exercises, and answer explanations.
+
+## Framework lifecycle note — checked 2026-09-27
+
+The [official AutoGen repository](https://github.com/microsoft/autogen) describes maintenance mode and directs new users to Microsoft Agent Framework. Use AutoGen here for understanding existing implementations and migration; verify lifecycle and package versions before choosing a new-project dependency.

@@ -1,5 +1,7 @@
 # 02 — Model APIs
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/retry_policy.py) · [Full learning path](../LEARNING-PATH.md)
+
 > **Read first:** [`STUDY-GUIDE.md`](STUDY-GUIDE.md) — provider boundaries, reliability, streaming, routing, and cost concepts.
 
 Build a reliable boundary between your application and model providers.

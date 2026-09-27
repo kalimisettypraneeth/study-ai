@@ -121,3 +121,39 @@ Explain without notes:
 3. Precision vs recall.
 4. Training vs inference.
 5. ML lifecycle.
+
+## Worked walkthrough — choosing an ML approach
+
+A shop wants to predict next week's demand. The output is a number, so supervised regression is a candidate if representative historical examples exist. If the goal is to group similar customers without known labels, clustering is a different task. If an agent learns a sequence of actions from rewards, that is reinforcement learning; ordinary labeled classification is not reinforcement learning simply because humans supplied the labels.
+
+Start with the business decision and a non-ML baseline. A fixed threshold may solve a simple problem more cheaply. Check missing values, label quality, duplicate records, and data leakage before selecting a complicated model. Split related examples together when random splitting would put near-duplicates in both training and testing.
+
+```mermaid
+flowchart TD
+    Goal[Define decision] --> Label{Known target labels?}
+    Label -->|Yes| Target{Numeric or category?}
+    Target -->|Numeric| Regression[Regression]
+    Target -->|Category| Classification[Classification]
+    Label -->|No| Groups[Explore clustering]
+    Regression --> Evaluate[Evaluate against baseline]
+    Classification --> Evaluate
+    Groups --> Evaluate
+```
+
+This diagram covers prediction and grouping choices; it is not a complete taxonomy of all AI. A neural network is a model family, while classification is a task. The same task can use several model families.
+
+### Training, inference, and deployment
+
+Training adjusts parameters. Real-time inference serves a request now; batch inference processes a collection on a schedule. A nightly demand forecast does not necessarily need a continuously running low-latency endpoint. MLOps adds reproducible data/model versions, deployment checks, monitoring, and controlled retraining. Drift means the data or relationship can change after deployment, so test-set accuracy from last month may not describe today.
+
+### Exercise and self-check
+
+For TP=8, FP=2, FN=4, TN=86, calculate accuracy, precision, and recall before opening the answer. Then explain why a 94% accuracy headline can be misleading.
+
+<details><summary>Worked answer</summary>
+
+Accuracy is 94%, precision is 80%, and recall is 66.7%. Four of twelve actual positives were missed. A system can look accurate on a mostly negative dataset while missing a substantial share of the positives. Choose a threshold based on the costs of misses and false alarms, then validate on representative held-out data.
+
+</details>
+
+Practice further in the [domain quiz workbook](DOMAIN-QUIZZES.md#domain-1).

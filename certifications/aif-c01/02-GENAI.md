@@ -139,3 +139,41 @@ Know tools, memory, orchestration, multi-agent patterns, MCP, and agent communic
 - RAG is not fine-tuning.
 - Larger model does not automatically mean better business choice.
 - More context can increase cost and latency.
+
+## Worked walkthrough — how generation differs from retrieval
+
+Imagine a librarian who finds passages and a writer who composes an answer from them. Retrieval supplies evidence; generation creates an output sequence. A foundation model can support several tasks after broad training, while an application chooses the context and output constraints for one task. Not every foundation model is text-only: modalities can include images, audio, and other data.
+
+An embedding model maps content into a vector for comparison. It does not itself answer “What is our refund policy?” A language model can compose an answer but may invent one if evidence is missing. Diffusion models learn a denoising process used in generation; understand the contrast with autoregressive token generation without assuming all image models use the same architecture.
+
+```mermaid
+flowchart TD
+    Question[User question] --> Embed[Query representation]
+    Embed --> Search[Relevant passages]
+    Instructions[Application instructions] --> Context[Selected context]
+    Search --> Context
+    Context --> Generate[Generate answer]
+    Generate --> Verify{Supported?}
+    Verify -->|Yes| Answer[Return with evidence]
+    Verify -->|No| Review[Abstain or review]
+```
+
+### Tokens and context in practical terms
+
+A tokenizer may split a long word into several pieces. Counts differ by model and language. The context window limits what can be supplied for a call; it is not permanent learning. Conversation memory and retrieved documents must be selected into the available budget. More context can increase cost and distraction, so evaluate whether each addition helps.
+
+### Model selection and limitations
+
+Choose a model using task quality, modality, language coverage, latency, cost, and data requirements. Generated fluency is not evidence of accuracy. Hallucinations, bias, prompt injection, and inconsistent outputs require different controls. Low temperature may reduce sampling variation but does not make an unsupported statement true. A business metric such as correctly resolved requests is more informative than counting generated words.
+
+### Exercise and self-check
+
+You have a fictional 4,000-token total allowance, reserve 800 output tokens, and need 600 tokens for instructions/history. How many remain for retrieved evidence before extra overhead? What if the answer is missing from all documents?
+
+<details><summary>Worked answer</summary>
+
+There are 2,600 tokens before overhead. Select relevant passages within that allowance using the real tokenizer when calling a model. If evidence is missing, return an explicit limitation or ask for more information; filling the context with unrelated passages does not solve the problem.
+
+</details>
+
+Practice further in the [domain quiz workbook](DOMAIN-QUIZZES.md#domain-2).

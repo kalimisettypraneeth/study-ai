@@ -1,5 +1,7 @@
 # 04 — Agents: Concept Notes
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/bounded_agent.py) · [Full learning path](../LEARNING-PATH.md)
+
 ## What is an agent?
 
 An agent is a bounded control loop in which an LLM chooses the next action using the current state.

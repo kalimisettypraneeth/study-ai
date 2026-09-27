@@ -60,3 +60,7 @@ Read JSON trace files and print a compact run timeline. Later, use the same sche
 **Eval CLI** — one command to run a dataset against several model/prompt configurations and produce a regression report.
 
 **Trace CLI** — inspect one agent run from the terminal, including model calls, tools, state transitions, latency, retries, and estimated cost.
+
+## Applied exercises and quiz
+
+Use the local [practice workbook](PRACTICE.md) for a worked example, exercises, acceptance criteria, and a quiz with explanations.

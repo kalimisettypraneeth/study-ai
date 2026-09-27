@@ -9,3 +9,7 @@ Certification study material lives here, separate from the core AI engineering c
 The AIF-C01 material is designed for a beginner: fundamentals first, then AWS AI/ML services, generative AI, foundation models, responsible AI, security/governance, hands-on demos, and exam-style practice.
 
 > **Source of truth:** always cross-check against the current AWS AIF-C01 Exam Guide, because AWS can revise exam objectives and in-scope services.
+
+## Study actively
+
+Use the [AIF-C01 domain lessons](aif-c01/README.md) and [domain quizzes with explanations](aif-c01/DOMAIN-QUIZZES.md). Draw each domain diagram from memory, solve its exercise, then record mistakes by concept rather than memorizing answer letters.

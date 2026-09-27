@@ -1,5 +1,7 @@
 # 06 — RAG: Concept Notes
 
+> **Expanded learning:** [Detailed lesson](DEEP-DIVE.md) · [Exercises, solutions, and quiz](PRACTICE.md) · [Runnable example](examples/hybrid_search.py) · [Full learning path](../LEARNING-PATH.md)
+
 ## RAG is two systems
 
 RAG combines retrieval with generation.

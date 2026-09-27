@@ -4,6 +4,16 @@ A hands-on knowledge base for an engineer who wants to learn how to design, buil
 
 **Learning progression:** LLMs → prompting → structured outputs → tools → agents → memory → RAG → orchestration → multi-agent systems → evaluation → observability → production.
 
+## Start the expanded learning path
+
+Open [LEARNING-PATH.md](LEARNING-PATH.md) for all 12 detailed lessons, 12 runnable offline examples, exercises with solutions, and quizzes with explanations. It also links the AWS certification and n8n practice tracks.
+
+```bash
+python scripts/run_learning_examples.py
+```
+
+Python 3.11+; no extra packages, API keys, or cloud costs.
+
 ## Read this first
 
 Open the `STUDY-GUIDE.md` inside the section you are studying. Each guide teaches the concepts through diagrams, mental models, plain-English explanations, worked examples, best practices, and references before you start coding.
@@ -39,9 +49,10 @@ study-ai/
 ├── 00-foundations/
 │   ├── README.md
 │   ├── STUDY-GUIDE.md
-│   ├── examples/
-│   ├── experiments/
-│   └── tests/
+│   ├── CONCEPTS.md
+│   ├── DEEP-DIVE.md
+│   ├── PRACTICE.md
+│   └── examples/
 ├── 01-llm-engineering/
 ├── 02-model-apis/
 ├── 03-tools/
@@ -53,6 +64,8 @@ study-ai/
 ├── 09-observability/
 ├── 10-production/
 ├── 11-frameworks/
+├── LEARNING-PATH.md
+├── certifications/
 ├── labs/
 ├── projects/
 ├── docs/
@@ -63,7 +76,7 @@ study-ai/
 └── scripts/
 ```
 
-Every numbered section follows the same pattern: `README.md` for navigation and build tasks, `STUDY-GUIDE.md` for concepts/diagrams/examples, then examples, experiments, tests, and projects.
+Every numbered section has `README.md` for navigation, `STUDY-GUIDE.md` and `CONCEPTS.md` for summaries, `DEEP-DIVE.md` for expanded explanations, `PRACTICE.md` for exercises and quiz answers, and an `examples/` directory with a runnable Python fixture and instructions. Further experiments and projects are assignments described in the guides.
 
 ## Capstone sequence
 

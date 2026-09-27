@@ -67,3 +67,7 @@ For every AWS service learn: **problem → service → why it fits → key limit
 - Domain 4
 - Domain 5
 - In-scope AWS services
+
+## Expanded practice
+
+Each of the five domain pages now includes a worked walkthrough, a Mermaid diagram, and a solved exercise. Finish with the [25-question domain workbook](DOMAIN-QUIZZES.md). For implementation practice, use the [core learning path](../../LEARNING-PATH.md).
