@@ -1,5 +1,7 @@
 # AI Agents Engineering — Study, Build, Experiment
 
+Open the [interactive Agent Fieldbook](https://kalimisettypraneeth.github.io/study-ai/) to run nine agent engineering labs and track your progress. The [workspace source](docs/index.html) runs locally by opening the HTML file in a browser.
+
 A hands-on knowledge base for an engineer who wants to learn how to design, build, evaluate, and operate AI systems powered by LLMs.
 
 **Learning progression:** LLMs → prompting → structured outputs → tools → agents → memory → RAG → orchestration → multi-agent systems → evaluation → observability → production.
